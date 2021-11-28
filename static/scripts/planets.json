@@ -4,14 +4,14 @@
             "name": "Mercury",
             "src": "#mercury",
             "radius": "2",
-            "position": "-10 70 -108",
+            "position": "-10 71s -108",
             "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
         },
         {
             "name": "Venus",
             "src": "#venus",
             "radius": "3",
-            "position": "0 51 -108", 
+            "position": "0 47.5 -98", 
             "animation": "property: rotation; to: 0 -360 0; loop: true; dur: 20000"
         },
         {

@@ -17,24 +17,29 @@
         <img id="uranus" src="./static/images/uranus.jpg" />
         <img id="neptune" src="./static/images/neptune.jpg" />
         <audio id="background" src="./static/sound/space.wav"></audio>
+        <a-asset-item id="christmas-tree" src="./static/models/ChristmasTree/ChristmasTree.glb"></a-asset-item>
       </a-assets>
       <a-entity star-system></a-entity>
+      <a-entity camera look-controls wasd-controls="acceleration: 1000">
+        <!-- ... -->
+      </a-entity>
       <a-light type="ambient" position="-25 3 -10`"></a-light>
-      <a-sound src="#background" autoplay="true"></a-sound>
+      <a-entity id="background-music" sound="src: #background" autoplay="true"></a-entity>
+      <a-entity gltf-model="#christmas-tree" position="0 -60 -110" scale="0.5 0.5 0.5">
     </a-scene>
     <script src="./static/scripts/SolarSystem.js"></script>
     <script>
       window.addEventListener("load", async () => {
-        let solarSystem = new SolarSystem();
+      //   let solarSystem = new SolarSystem();
 
-        fetch("./static/scripts/planets.json")
-        .then(response => response.json())
-        .then(jsonResponse => {
-          solarSystem.generateSun();
-          solarSystem.generatePlanets(jsonResponse["planets"]);
-          solarSystem.generateRings([jsonResponse["planets"][5], jsonResponse["planets"][6]]);
-          solarSystem.generateLabels(jsonResponse["planets"]);
-        })
+      //   fetch("./static/scripts/planets.json")
+      //   .then(response => response.json())
+      //   .then(jsonResponse => {
+      //     solarSystem.generateSun();
+      //     solarSystem.generatePlanets(jsonResponse["planets"]);
+      //     solarSystem.generateRings([jsonResponse["planets"][5], jsonResponse["planets"][6]]);
+      //     solarSystem.generateLabels(jsonResponse["planets"]);
+      //   })
       });
     </script>
   </body>

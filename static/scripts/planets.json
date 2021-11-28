@@ -13,6 +13,13 @@
             "radius": "3",
             "position": "0 51 -108", 
             "animation": "property: rotation; to: 0 -360 0; loop: true; dur: 20000"
+        },
+        {
+            "name": "Earth",
+            "src": "#earth",
+            "radius": "3",
+            "position": "-20 34 -108", 
+            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
         }
     ]
 }

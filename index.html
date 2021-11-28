@@ -28,16 +28,16 @@
     <script src="./static/scripts/SolarSystem.js"></script>
     <script>
       window.addEventListener("load", async () => {
-      //   let solarSystem = new SolarSystem();
+        let solarSystem = new SolarSystem();
 
-      //   fetch("./static/scripts/planets.json")
-      //   .then(response => response.json())
-      //   .then(jsonResponse => {
-      //     solarSystem.generateSun();
-      //     solarSystem.generatePlanets(jsonResponse["planets"]);
-      //     solarSystem.generateRings([jsonResponse["planets"][5], jsonResponse["planets"][6]]);
-      //     solarSystem.generateLabels(jsonResponse["planets"]);
-      //   })
+        fetch("./static/scripts/planets.json")
+        .then(response => response.json())
+        .then(jsonResponse => {
+          solarSystem.generateSun();
+          solarSystem.generatePlanets(jsonResponse["planets"]);
+          // solarSystem.generateRings([jsonResponse["planets"][5], jsonResponse["planets"][6]]);
+          // solarSystem.generateLabels(jsonResponse["planets"]);
+        })
       });
     </script>
   </body>

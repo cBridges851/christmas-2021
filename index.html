@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js"></script>
+    <title>Solar System</title>
+  </head>
+  <body>
+    <a-scene background="color: #000000">
+      <a-assets>
+        <img id="sun" src="./static/images/sun.jpg" />
+        <img id="mercury" src="./static/images/mercury.jpg" />
+        <img id="venus" src="./static/images/venus.jpg" />
+        <img id="earth" src="./static/images/earth.jpg" />
+        <img id="mars" src="./static/images/mars.jpg" />
+        <img id="jupiter" src="./static/images/jupiter.jpg" />
+        <img id="saturn" src="./static/images/saturn.jpg" />
+        <img id="uranus" src="./static/images/uranus.jpg" />
+        <img id="neptune" src="./static/images/neptune.jpg" />
+        <audio id="background" src="./static/sound/space.wav"></audio>
+      </a-assets>
+      <a-entity star-system></a-entity>
+      <a-light type="ambient" position="-25 3 -10`"></a-light>
+      <a-sound src="#background" autoplay="true"></a-sound>
+    </a-scene>
+    <script src="./static/scripts/SolarSystem.js"></script>
+    <script>
+      window.addEventListener("load", async () => {
+        let solarSystem = new SolarSystem();
+
+        fetch("./static/scripts/planets.json")
+        .then(response => response.json())
+        .then(jsonResponse => {
+          solarSystem.generateSun();
+          solarSystem.generatePlanets(jsonResponse["planets"]);
+          solarSystem.generateRings([jsonResponse["planets"][5], jsonResponse["planets"][6]]);
+          solarSystem.generateLabels(jsonResponse["planets"]);
+        })
+      });
+    </script>
+  </body>
+</html>

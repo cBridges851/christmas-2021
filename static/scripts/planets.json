@@ -27,6 +27,13 @@
             "radius": "2",
             "position": "16 25 -120", 
             "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
+        },
+        {
+            "name": "Jupiter",
+            "src": "#jupiter",
+            "radius": "5",
+            "position": "-28 15 -120",
+            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
         }
     ]
 }

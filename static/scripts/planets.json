@@ -59,6 +59,23 @@
                     "scale": "2 2 0.2"
                 }
             ]
+        },
+        {
+            "name": "Uranus",
+            "src": "#uranus",
+            "radius": "3.75",
+            "position": "31 -12 -110",
+            "animation": "property: rotation; to: 0 -360 0; loop: true; dur: 20000",
+            "rings": [
+                {
+                    "color": "#FFFFFF",
+                    "segments_tubular": "50",
+                    "radius": "1.5",
+                    "radius_tubular": "0.01",
+                    "rotation": "-10 90 0", 
+                    "scale": "3.75 3.75 0.375"
+                }
+            ]
         }
     ]
 }

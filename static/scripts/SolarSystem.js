@@ -41,28 +41,4 @@ class SolarSystem {
       }
     }
   }
-
-  generateLabels(planets) {
-    const sunLabel = document.createElement("a-text");
-    const aScene = document.querySelector("a-scene");
-    sunLabel.setAttribute("value", "Sun");
-    sunLabel.setAttribute("color", "#FFEE00");
-    sunLabel.setAttribute("position", "-30 7 -10");
-    sunLabel.setAttribute("scale", "3 3 3");
-    aScene.appendChild(sunLabel);
-
-    for (let planet of planets) {
-      const label = document.createElement("a-text");
-      label.setAttribute("value", planet.name);
-      label.setAttribute("color", "#FFEE00");
-      let positionValues = planet.position.split(" ");
-      let newHeight = parseInt(positionValues[1]) + 1.5;
-      positionValues[1] = newHeight.toString();
-      let newPositionValues = positionValues.toString();
-      newPositionValues = newPositionValues.replaceAll(",", " ");
-      label.setAttribute("position", newPositionValues);
-      label.setAttribute("scale", "3 3 3");
-      aScene.appendChild(label);
-    }
-  }
 }

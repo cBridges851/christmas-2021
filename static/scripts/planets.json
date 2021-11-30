@@ -76,6 +76,13 @@
                     "scale": "3.75 3.75 0.375"
                 }
             ]
+        },
+        {
+            "name": "Neptune",
+            "src": "#neptune",
+            "radius": "3.75",
+            "position": "-34 -30 -90" ,
+            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
         }
     ]
 }

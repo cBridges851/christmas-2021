@@ -3,8 +3,8 @@ class SolarSystem {
     const sun = document.createElement("a-sphere");
 
     sun.setAttribute("src", "#sun");
-    sun.setAttribute("position", "-30 2 -10");
-    sun.setAttribute("radius", "4");
+    sun.setAttribute("position", "-1 88 -108");
+    sun.setAttribute("radius", "6");
 
     const aScene = document.querySelector("a-scene");
     aScene.appendChild(sun);
@@ -39,30 +39,6 @@ class SolarSystem {
         torus.setAttribute("scale", ring.scale);
         aScene.appendChild(torus);
       }
-    }
-  }
-
-  generateLabels(planets) {
-    const sunLabel = document.createElement("a-text");
-    const aScene = document.querySelector("a-scene");
-    sunLabel.setAttribute("value", "Sun");
-    sunLabel.setAttribute("color", "#FFEE00");
-    sunLabel.setAttribute("position", "-30 7 -10");
-    sunLabel.setAttribute("scale", "3 3 3");
-    aScene.appendChild(sunLabel);
-
-    for (let planet of planets) {
-      const label = document.createElement("a-text");
-      label.setAttribute("value", planet.name);
-      label.setAttribute("color", "#FFEE00");
-      let positionValues = planet.position.split(" ");
-      let newHeight = parseInt(positionValues[1]) + 1.5;
-      positionValues[1] = newHeight.toString();
-      let newPositionValues = positionValues.toString();
-      newPositionValues = newPositionValues.replaceAll(",", " ");
-      label.setAttribute("position", newPositionValues);
-      label.setAttribute("scale", "3 3 3");
-      aScene.appendChild(label);
     }
   }
 }

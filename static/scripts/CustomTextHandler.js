@@ -13,6 +13,23 @@ class CustomTextHandler {
     updateText(customText) {
         const aText = document.querySelector("#customOutput");
         aText.setAttribute("value", customText);
-        console.log(aText.getAttribute("width"));
+        fetch("./static/fonts/Gwendolyn-Bold-msdf.json")
+        .then(response => response.json())
+        .then(jsonResponse => {
+            let length = 0;
+            console.log(jsonResponse)
+            for (const character of customText) {
+                console.log(character);
+                for (let charInfo of jsonResponse.chars) {
+
+                    if (charInfo.char == character) {
+                        console.log(charInfo)
+                        length += charInfo.width;
+                    }
+                }
+            }
+
+            console.log(length);
+        })
     }
 }

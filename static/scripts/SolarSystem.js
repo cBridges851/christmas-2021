@@ -3,7 +3,7 @@ class SolarSystem {
     const sun = document.createElement("a-sphere");
 
     sun.setAttribute("src", "#sun");
-    sun.setAttribute("position", "-1 88 -108");
+    sun.setAttribute("position", "-81 88 -108");
     sun.setAttribute("radius", "6");
 
     const aScene = document.querySelector("a-scene");

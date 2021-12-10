@@ -24,15 +24,15 @@
       <a-entity camera look-controls wasd-controls="acceleration: 1000"></a-entity>
       <a-light type="ambient" position="-25 3 -10" intensity="1.5"></a-light>
       <a-sound src="#background-music" autoplay="false" loop="true"></a-sound>
-      <a-entity gltf-model="#christmas-tree" position="0 -60 -110" scale="0.5 0.5 0.5"></a-entity>
-      <a-entity gltf-model="#astronaut" position="-80 -40 -110" scale="0.4 0.4 0.4" rotation="0 40 0" 
+      <a-entity gltf-model="#christmas-tree" position="-80 -60 -110" scale="0.5 0.5 0.5"></a-entity>
+      <!-- <a-entity gltf-model="#astronaut" position="-80 -40 -110" scale="0.4 0.4 0.4" rotation="0 40 0" 
           animation="
           property: object3D.position.y;
           to: -41; 
           dir: alternate; 
           dur: 1000; 
-          loop: true"></a-entity>
-      <a-entity 
+          loop: true"></a-entity> -->
+      <!-- <a-entity 
         gltf-model="#astronaut" 
         position="65 -41 -106" 
         scale="0.4 0.4 0.4" 
@@ -42,14 +42,14 @@
           to: -40; 
           dir: alternate; 
           dur: 1000; 
-          loop: true"></a-entity>
+          loop: true"></a-entity> -->
       <a-text 
         value="Merry"
         font="./static/fonts/Gwendolyn-Bold-msdf.json"
         color="#FFFFFF"
         negate="false"
         scale="100 100 100"
-        position="-100 80 -110">
+        position="-50 80 -110">
       </a-text>
       <a-text 
         value="Christmas"
@@ -57,16 +57,16 @@
         color="#FFFFFF"
         negate="false"
         scale="100 100 100"
-        position="30 80 -110">
+        position="-40 50 -110">
       </a-text>
       <a-text
         id="customOutput"
         font="./static/fonts/Gwendolyn-Bold-msdf.json"
         color="#FFFFFF"
         negate="false"
-        scale="100 100 100">
+        scale="100 100 100"
+        position="-30 20 -110">
       </a-text>
-      <a-entity line="start: 82 -65 -110; end: 140 -65 -110; color: red"></a-entity>
     </a-scene>
     <script src="./static/scripts/SolarSystem.js"></script>
     <script src="./static/scripts/CustomTextHandler.js"></script>

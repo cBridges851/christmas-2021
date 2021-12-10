@@ -17,9 +17,7 @@ class CustomTextHandler {
         .then(response => response.json())
         .then(jsonResponse => {
             let length = 0;
-            console.log(jsonResponse)
             for (const character of customText) {
-                console.log(character);
                 for (let charInfo of jsonResponse.chars) {
 
                     if (charInfo.char == character) {
@@ -30,6 +28,12 @@ class CustomTextHandler {
             }
 
             console.log(length);
+
+            const position = (0.56521739130434782608695652173913 * length);
+            // console.log((0.56521739130434782608695652173913 * length))
+            // console.log(position)
+
+            aText.setAttribute("position", `${position} -65 -110`)
         })
     }
 }

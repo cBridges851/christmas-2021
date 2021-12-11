@@ -19,6 +19,7 @@
         <audio id="background-music" src="./static/sound/space.wav"></audio>
         <a-asset-item id="christmas-tree" src="./static/models/ChristmasTree/ChristmasTree.glb"></a-asset-item>
         <a-asset-item id="astronaut" src="./static/models/Astronaut/Astronaut.glb"></a-asset-item>
+        <a-asset-item id="asteroid" src="./static/models/Asteroid/Asteroid.glb"></a-asset-item>
       </a-assets>
       <a-entity star-system></a-entity>
       <a-entity camera look-controls wasd-controls="acceleration: 1000"></a-entity>
@@ -76,10 +77,12 @@
     </a-scene>
     <script src="./static/scripts/SolarSystem.js"></script>
     <script src="./static/scripts/CustomTextHandler.js"></script>
+    <script src="./static/scripts/AsteroidHandler.js"></script>
     <script>
       window.addEventListener("load", async () => {
         const solarSystem = new SolarSystem();
         const customTextHandler = new CustomTextHandler();
+        const asteroidHandler = new AsteroidHandler();
 
         fetch("./static/scripts/planets.json")
         .then(response => response.json())
@@ -87,9 +90,24 @@
           solarSystem.generateSun();
           solarSystem.generatePlanets(jsonResponse["planets"]);
           solarSystem.generateRings([jsonResponse["planets"][5], jsonResponse["planets"][6]]);
+          solarSystem.generateAsteroids();
 
           const params = customTextHandler.receiveParameters();
           customTextHandler.updateText(params);
+          const asteroids = asteroidHandler.collateAsteroids();
+
+          for (const asteroid of asteroids) {
+            const initialPosition = asteroidHandler.generateNewPosition();
+            asteroidHandler.setInitialPosition(initialPosition, asteroid);
+            const positions = asteroidHandler.generateNewPosition();
+            asteroidHandler.travelToNewPosition(positions, asteroid);
+
+            setInterval(() => {
+              const positions = asteroidHandler.generateNewPosition();
+              asteroidHandler.travelToNewPosition(positions, asteroid);
+            }, 10000);
+          }
+
         })
       });
     </script>

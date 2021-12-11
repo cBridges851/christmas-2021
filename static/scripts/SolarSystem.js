@@ -41,4 +41,17 @@ class SolarSystem {
       }
     }
   }
+
+  generateAsteroids() {
+    const aScene = document.querySelector("a-scene");
+
+    for (let i = 0; i < 20; i++) {
+      const asteroid = document.createElement("a-entity");
+      asteroid.setAttribute("class", "asteroid_model");
+      asteroid.setAttribute("gltf-model", "#asteroid");
+      asteroid.setAttribute("scale", "0.2 0.2 0.2");
+      asteroid.setAttribute("animation", "property: rotation; to: 0 360 0; loop: true; dur: 20000");
+      aScene.appendChild(asteroid);
+    }
+  }
 }

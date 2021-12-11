@@ -4,42 +4,42 @@
             "name": "Mercury",
             "src": "#mercury",
             "radius": "2",
-            "position": "-10 71 -108",
+            "position": "-90 71 -108",
             "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
         },
         {
             "name": "Venus",
             "src": "#venus",
             "radius": "3",
-            "position": "0 47.5 -98", 
+            "position": "-80 47.5 -98", 
             "animation": "property: rotation; to: 0 -360 0; loop: true; dur: 20000"
         },
         {
             "name": "Earth",
             "src": "#earth",
             "radius": "3",
-            "position": "-20 34 -108", 
+            "position": "-100 34 -108", 
             "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
         },
         {
             "name": "Mars",
             "src": "#mars",
             "radius": "2",
-            "position": "16 25 -120", 
+            "position": "-64 25 -120", 
             "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
         },
         {
             "name": "Jupiter",
             "src": "#jupiter",
             "radius": "5",
-            "position": "-28 15 -120",
+            "position": "-108 15 -120",
             "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
         },
         {
             "name": "Saturn",
             "src": "#saturn",
             "radius": "4",
-            "position": "-33 -4 -110",
+            "position": "-113 -4 -110",
             "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000",
             "rings": [
                 {
@@ -64,7 +64,7 @@
             "name": "Uranus",
             "src": "#uranus",
             "radius": "3.75",
-            "position": "31 -12 -110",
+            "position": "-49 -12 -110",
             "animation": "property: rotation; to: 0 -360 0; loop: true; dur: 20000",
             "rings": [
                 {
@@ -81,7 +81,7 @@
             "name": "Neptune",
             "src": "#neptune",
             "radius": "3.75",
-            "position": "-34 -30 -90" ,
+            "position": "-114 -30 -90" ,
             "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
         }
     ]

@@ -1,8 +1,8 @@
 class AsteroidHandler {
     generateNewPosition() {
-        const xPosition = Math.random() * (1000 - -1000) + -1000;
-        const yPosition = Math.random() * (1000 - -1000) + -1000;
-        const zPosition = Math.random() * (1000 - -1000) + -1000;
+        const xPosition = Math.random() * (1500 - -1500) + -1500;
+        const yPosition = Math.random() * (1500 - -1500) + -1500;
+        const zPosition = Math.random() * (1500 - -1500) + -1500;
 
         return [xPosition, yPosition, zPosition]
     }

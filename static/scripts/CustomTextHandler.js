@@ -3,8 +3,8 @@ class CustomTextHandler {
         const url = window.location.href;
         const regexPattern = /(?<=\?name=)[a-z1-9?!.,&#()\@\:\;\/\-]+/i;
         const match = url.match(regexPattern);
+
         if (match !== null) {
-            console.log(match[0])
             return match[0];
         }
 

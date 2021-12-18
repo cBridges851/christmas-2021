@@ -2,6 +2,8 @@
   <head>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js"></script>
+    <script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
+    <script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
     <title>Solar System</title>
   </head>
   <body>
@@ -20,7 +22,8 @@
         <a-asset-item id="christmas-tree" src="./static/models/ChristmasTree/ChristmasTree.glb"></a-asset-item>
         <a-asset-item id="astronaut" src="./static/models/Astronaut/Astronaut.glb"></a-asset-item>
         <a-asset-item id="asteroid" src="./static/models/Asteroid/Asteroid.glb"></a-asset-item>
-        <a-asset-item id="green-flying-saucer" src="./static/models/FlyingSaucer/RedFlyingSaucer.glb"></a-asset-item>
+        <a-asset-item id="red-flying-saucer" src="./static/models/FlyingSaucer/RedFlyingSaucer.glb"></a-asset-item>
+        <a-asset-item id="green-flying-saucer" src="./static/models/FlyingSaucer/GreenFlyingSaucer.glb"></a-asset-item>
       </a-assets>
       <a-entity star-system></a-entity>
       <a-entity camera look-controls wasd-controls="acceleration: 1000"></a-entity>
@@ -31,7 +34,7 @@
       </a-light>
       <a-sound 
         src="#background-music" 
-        autoplay="false" 
+        autoplay="true" 
         loop="true">
       </a-sound>
       <a-entity 
@@ -52,7 +55,7 @@
             loop: true">
       </a-entity>
       <a-entity 
-        gltf-model="#green-flying-saucer" 
+        gltf-model="#red-flying-saucer" 
         position="-1000 250 -610"
         animation="
           property: rotation; 
@@ -66,6 +69,25 @@
           dir:alternate;
           dur: 10000;
         ">
+      </a-entity>
+      <a-curve id="track1">
+        <a-curve-point position="1000 0 500"></a-curve-point>
+        <a-curve-point position="1000 0 -500"></a-curve-point>
+        <a-curve-point position="0 0 -1000"></a-curve-point>
+        <a-curve-point position="-1000 0 -500"></a-curve-point>
+        <a-curve-point position="-1000 0 500"></a-curve-point>
+        <a-curve-point position="-0 0 1000"></a-curve-point>
+      </a-curve>
+      <a-entity 
+        id="green-flying-saucer__round-route"
+        gltf-model="#green-flying-saucer" 
+        position="0 0 1000"
+        alongpath="curve: #track1; loop: true; rotate: true; dur: 50000"
+        animation="
+          property: rotation; 
+          to: 0 360 0; 
+          loop: true; 
+          dur: 6000">
       </a-entity>
       <a-text 
         value="Merry"
@@ -124,8 +146,7 @@
               asteroidHandler.travelToNewPosition(positions, asteroid);
             }, 15000);
           }
-
-        })
+        });
       });
     </script>
   </body>

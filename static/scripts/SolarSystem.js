@@ -54,4 +54,16 @@ class SolarSystem {
       aScene.appendChild(asteroid);
     }
   }
+
+  generateOrnamentStrings(planets) {
+    const aScene = document.querySelector("a-scene");
+
+    for (let planet of planets) {
+      const ornamentString  = document.createElement("a-entity");
+      ornamentString.setAttribute("gltf-model", "#ornament-string");
+      ornamentString.setAttribute("position", planet.ornamentString.position);
+      ornamentString.setAttribute("scale", planet.ornamentString.scale);
+      aScene.appendChild(ornamentString);
+    }
+  }
 }

@@ -25,6 +25,8 @@
         <a-asset-item id="asteroid" src="./static/models/Asteroid/Asteroid.glb"></a-asset-item>
         <a-asset-item id="red-flying-saucer" src="./static/models/FlyingSaucer/RedFlyingSaucer.glb"></a-asset-item>
         <a-asset-item id="green-flying-saucer" src="./static/models/FlyingSaucer/GreenFlyingSaucer.glb"></a-asset-item>
+        <a-asset-item id="ornament-string" src="./static/models/OrnamentString/OrnamentString.glb"></a-asset-item>
+        <a-asset-item id="nakatomi-plaza-sign" src="./static/models/NakatomiPlazaSign/NakatomiPlazaSign.glb"></a-asset-item>
       </a-assets>
       <a-entity star-system></a-entity>
       <a-entity camera look-controls wasd-controls="acceleration: 1000"></a-entity>
@@ -93,6 +95,17 @@
           to: 0 360 0; 
           loop: true; 
           dur: 6000">
+      </a-entity>
+      <a-entity 
+        gltf-model="#ornament-string" 
+        position="-59 5.4 -110"
+        scale="0.2 0.2 0.2">
+      </a-entity>
+      <a-entity 
+        gltf-model="#nakatomi-plaza-sign" 
+        position="-56.7 -1 -115"
+        rotation="15 0 0"
+        scale="0.1 0.1 0.1">
       </a-entity>
       <a-text 
         value="Merry"

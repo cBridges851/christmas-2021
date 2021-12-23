@@ -235,6 +235,7 @@
         const solarSystem = new SolarSystem();
         const customTextHandler = new CustomTextHandler();
         const asteroidHandler = new AsteroidHandler();
+        let example = 0;
 
         fetch("./static/scripts/planets.json")
         .then(response => response.json())
@@ -262,6 +263,8 @@
           }
         });
       });
+
+      console.log("Hello there! ");
     </script>
   </body>
 </html>

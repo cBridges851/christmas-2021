@@ -27,6 +27,7 @@
         <a-asset-item id="green-flying-saucer" src="./static/models/FlyingSaucer/GreenFlyingSaucer.glb"></a-asset-item>
         <a-asset-item id="gold-flying-saucer" src="./static/models/FlyingSaucer/GoldFlyingSaucer.glb"></a-asset-item>
         <a-asset-item id="silver-flying-saucer" src="./static/models/FlyingSaucer/SilverFlyingSaucer.glb"></a-asset-item>
+        <a-asset-item id="purple-flying-saucer" src="./static/models/FlyingSaucer/PurpleFlyingSaucer.glb"></a-asset-item>
         <a-asset-item id="ornament-string" src="./static/models/OrnamentString/OrnamentString.glb"></a-asset-item>
         <a-asset-item id="nakatomi-plaza-sign" src="./static/models/NakatomiPlazaSign/NakatomiPlazaSign.glb"></a-asset-item>
       </a-assets>
@@ -138,19 +139,42 @@
           dur: 6000">
       </a-entity>
       <a-curve id="track__silver-flying-saucer-1">
-        <a-curve-point position="-1000 -600 500"></a-curve-point>
-        <a-curve-point position="0 -600 1000"></a-curve-point>
-        <a-curve-point position="1000 -600 500"></a-curve-point>
-        <a-curve-point position="1000 -600 -500"></a-curve-point>
-        <a-curve-point position="0 -600 -1000"></a-curve-point>
-        <a-curve-point position="-1000 -600 -500"></a-curve-point>
-        <a-curve-point position="-1000 -600 500"></a-curve-point>
+        <a-curve-point position="-500 -600 -250"></a-curve-point>
+        <a-curve-point position="-500 -600 250"></a-curve-point>
+        <a-curve-point position="0 -600 500"></a-curve-point>
+        <a-curve-point position="500 -600 250"></a-curve-point>
+        <a-curve-point position="500 -600 -250"></a-curve-point>
+        <a-curve-point position="0 -600 -500"></a-curve-point>
+        <a-curve-point position="-500 -600 -250"></a-curve-point>
       </a-curve>
       <a-entity 
         gltf-model="#silver-flying-saucer" 
-        position="-1000 -600 -500"
+        position="1000 -600 500"
         alongpath="
           curve: #track__silver-flying-saucer-1; 
+          loop: true; 
+          rotate: true; 
+          dur: 50000"
+        animation="
+          property: rotation; 
+          to: 0 360 0; 
+          loop: true; 
+          dur: 6000">
+      </a-entity>
+      <a-curve id="track__purple-flying-saucer-1">
+        <a-curve-point position="-1000 0 -500"></a-curve-point>
+        <a-curve-point position="-1000 0 500"></a-curve-point>
+        <a-curve-point position="0 0 1000"></a-curve-point>
+        <a-curve-point position="1000 0 500"></a-curve-point>
+        <a-curve-point position="1000 0 -500"></a-curve-point>
+        <a-curve-point position="0 0 -1000"></a-curve-point>
+        <a-curve-point position="-1000 0 -500"></a-curve-point>
+      </a-curve>
+      <a-entity 
+        gltf-model="#purple-flying-saucer" 
+        position="0 0 -1000"
+        alongpath="
+          curve: #track__purple-flying-saucer-1; 
           loop: true; 
           rotate: true; 
           dur: 50000"

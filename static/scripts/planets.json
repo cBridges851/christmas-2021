@@ -116,10 +116,12 @@
             "name": "Neptune",
             "src": "#neptune",
             "radius": "3.75",
-            "position": "-114 -30 -90" ,
+            "position": "-110 -38 -87" ,
             "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000",
             "ornamentString": {
-                "position": "-0 72 -108"
+                "position": "-112 -37 -82",
+                "scale": "0.48 0.35 0.2",
+                "rotation": "0 50 0"
             }
         }
     ]

@@ -63,6 +63,7 @@ class SolarSystem {
       ornamentString.setAttribute("gltf-model", "#ornament-string");
       ornamentString.setAttribute("position", planet.ornamentString.position);
       ornamentString.setAttribute("scale", planet.ornamentString.scale);
+      ornamentString.setAttribute("rotation", planet.ornamentString.rotation);
       aScene.appendChild(ornamentString);
     }
   }

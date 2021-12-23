@@ -8,17 +8,20 @@
             "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000",
             "ornamentString": {
                 "position": "-92.5 70 -108",
-                "scale": "0.2 0.2 0.2"
+                "scale": "0.2 0.2 0.2",
+                "rotation": "0 0 0"
             }
         },
         {
             "name": "Venus",
             "src": "#venus",
             "radius": "3",
-            "position": "-80 47.5 -98", 
+            "position": "-80 45 -99", 
             "animation": "property: rotation; to: 0 -360 0; loop: true; dur: 20000",
             "ornamentString": {
-                "position": "-0 72 -108"
+                "position": "-79 47 -96",
+                "scale": "0.25 0.2 0.2",
+                "rotation": "0 90 0"
             }
         },
         {

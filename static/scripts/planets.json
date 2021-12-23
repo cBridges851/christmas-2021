@@ -4,42 +4,67 @@
             "name": "Mercury",
             "src": "#mercury",
             "radius": "2",
-            "position": "-90 71 -108",
-            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
+            "position": "-90 69.5 -109",
+            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000",
+            "ornamentString": {
+                "position": "-92.5 70 -108",
+                "scale": "0.2 0.2 0.2",
+                "rotation": "0 0 0"
+            }
         },
         {
             "name": "Venus",
             "src": "#venus",
             "radius": "3",
-            "position": "-80 47.5 -98", 
-            "animation": "property: rotation; to: 0 -360 0; loop: true; dur: 20000"
+            "position": "-80 45 -99", 
+            "animation": "property: rotation; to: 0 -360 0; loop: true; dur: 20000",
+            "ornamentString": {
+                "position": "-79 47 -96",
+                "scale": "0.25 0.2 0.2",
+                "rotation": "0 90 0"
+            }
         },
         {
             "name": "Earth",
             "src": "#earth",
             "radius": "3",
-            "position": "-100 34 -108", 
-            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
+            "position": "-102 31 -110", 
+            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000",
+            "ornamentString": {
+                "position": "-104 33 -109",
+                "scale": "0.2 0.2 0.2",
+                "rotation": "0 0 0"
+            }
         },
         {
             "name": "Mars",
             "src": "#mars",
             "radius": "2",
-            "position": "-64 25 -120", 
-            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
+            "position": "-64 23 -121.5", 
+            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000",
+            "ornamentString": {
+                "position": "-65.8 23 -120",
+                "scale": "0.2 0.2 0.2",
+                "rotation": "0 0 0"
+            }
         },
         {
             "name": "Jupiter",
             "src": "#jupiter",
             "radius": "5",
-            "position": "-108 15 -120",
-            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
+            "position": "-105 12 -121",
+            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000",
+            "ornamentString": {
+                "position": "-108 15.5 -120",
+                "scale": "0.25 0.2 0.2",
+                "rotation": "0 0 0"
+            }
         },
         {
             "name": "Saturn",
             "src": "#saturn",
             "radius": "4",
-            "position": "-113 -4 -110",
+            "position": "-104 -8 -92",
             "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000",
             "rings": [
                 {
@@ -58,13 +83,18 @@
                     "rotation": "90 0 0", 
                     "scale": "2 2 0.2"
                 }
-            ]
+            ],
+            "ornamentString": {
+                "position": "-107 -6.5 -90",
+                "scale": "0.25 0.2 0.2",
+                "rotation": "0 10 0"
+            }
         },
         {
             "name": "Uranus",
             "src": "#uranus",
             "radius": "3.75",
-            "position": "-49 -12 -110",
+            "position": "-51 -15 -111",
             "animation": "property: rotation; to: 0 -360 0; loop: true; dur: 20000",
             "rings": [
                 {
@@ -75,14 +105,24 @@
                     "rotation": "-10 90 0", 
                     "scale": "3.75 3.75 0.375"
                 }
-            ]
+            ],
+            "ornamentString": {
+                "position": "-53.8 -13.3 -110",
+                "scale": "0.22 0.2 0.2",
+                "rotation": "0 0 0"
+            }
         },
         {
             "name": "Neptune",
             "src": "#neptune",
             "radius": "3.75",
-            "position": "-114 -30 -90" ,
-            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000"
+            "position": "-110 -38 -87" ,
+            "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000",
+            "ornamentString": {
+                "position": "-112 -37 -82",
+                "scale": "0.48 0.35 0.2",
+                "rotation": "0 50 0"
+            }
         }
     ]
 }

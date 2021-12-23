@@ -37,7 +37,7 @@
       </a-light>
       <a-sound 
         src="#background-music" 
-        autoplay="true" 
+        autoplay="false" 
         loop="true">
       </a-sound>
       <a-entity 
@@ -148,6 +148,7 @@
           solarSystem.generatePlanets(jsonResponse["planets"]);
           solarSystem.generateRings([jsonResponse["planets"][5], jsonResponse["planets"][6]]);
           solarSystem.generateAsteroids();
+          solarSystem.generateOrnamentStrings(jsonResponse["planets"]);
 
           const params = customTextHandler.receiveParameters();
           customTextHandler.updateText(params);

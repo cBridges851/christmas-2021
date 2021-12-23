@@ -28,10 +28,12 @@
             "name": "Earth",
             "src": "#earth",
             "radius": "3",
-            "position": "-100 34 -108", 
+            "position": "-101 31 -110", 
             "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000",
             "ornamentString": {
-                "position": "-0 72 -108"
+                "position": "-104 33 -109",
+                "scale": "0.2 0.2 0.2",
+                "rotation": "0 0 0"
             }
         },
         {

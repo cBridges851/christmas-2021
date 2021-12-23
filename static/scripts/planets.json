@@ -64,7 +64,7 @@
             "name": "Saturn",
             "src": "#saturn",
             "radius": "4",
-            "position": "-113 -4 -110",
+            "position": "-104 -8 -92",
             "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000",
             "rings": [
                 {
@@ -85,7 +85,9 @@
                 }
             ],
             "ornamentString": {
-                "position": "-0 72 -108"
+                "position": "-107 -6.5 -90",
+                "scale": "0.25 0.2 0.2",
+                "rotation": "0 10 0"
             }
         },
         {

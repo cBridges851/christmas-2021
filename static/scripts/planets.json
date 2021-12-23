@@ -28,7 +28,7 @@
             "name": "Earth",
             "src": "#earth",
             "radius": "3",
-            "position": "-101 31 -110", 
+            "position": "-102 31 -110", 
             "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000",
             "ornamentString": {
                 "position": "-104 33 -109",

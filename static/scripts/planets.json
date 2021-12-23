@@ -52,10 +52,12 @@
             "name": "Jupiter",
             "src": "#jupiter",
             "radius": "5",
-            "position": "-108 15 -120",
+            "position": "-105 12 -121",
             "animation": "property: rotation; to: 0 360 0; loop: true; dur: 20000",
             "ornamentString": {
-                "position": "-0 72 -108"
+                "position": "-108 15.5 -120",
+                "scale": "0.25 0.2 0.2",
+                "rotation": "0 0 0"
             }
         },
         {

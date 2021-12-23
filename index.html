@@ -73,6 +73,22 @@
           dur: 10000;
         ">
       </a-entity>
+      <a-entity 
+        gltf-model="#red-flying-saucer" 
+        position="1000 50 -610"
+        animation="
+          property: rotation; 
+          to: 0 360 0; 
+          loop: true; 
+          dur: 6000"
+        animation__2="
+          property: position;
+          to: -1000 50 -610;
+          loop: true;
+          dir: alternate;
+          dur: 10000;
+        ">
+      </a-entity>
       <a-curve id="track__green-flying-saucer-1">
         <a-curve-point position="1000 0 500"></a-curve-point>
         <a-curve-point position="1000 0 -500"></a-curve-point>

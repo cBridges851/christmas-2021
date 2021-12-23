@@ -94,7 +94,7 @@
             "name": "Uranus",
             "src": "#uranus",
             "radius": "3.75",
-            "position": "-49 -12 -110",
+            "position": "-51 -15 -111",
             "animation": "property: rotation; to: 0 -360 0; loop: true; dur: 20000",
             "rings": [
                 {
@@ -107,7 +107,9 @@
                 }
             ],
             "ornamentString": {
-                "position": "-0 72 -108"
+                "position": "-53.8 -13.3 -110",
+                "scale": "0.22 0.2 0.2",
+                "rotation": "0 0 0"
             }
         },
         {

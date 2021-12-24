@@ -8,11 +8,13 @@ class CustomTextHandler {
             return match[0];
         }
 
-        return "Everyone";
+        return "Everyone!";
     }
 
     updateText(customText) {
         const aText = document.querySelector("#customOutput");
+        const title = document.querySelector("title");
         aText.setAttribute("value", customText);
+        title.innerText = `Merry Christmas ${customText}`;
     }
 }

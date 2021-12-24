@@ -36,6 +36,7 @@ class SoundHandler {
         const audio = new Audio("./static/sound/space.wav");
         audio.volume = 0.1;
         audio.play();
+        audio.loop = true;
         this.hasUserInteracted = true;
     }
 }

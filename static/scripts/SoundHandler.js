@@ -33,7 +33,6 @@ class SoundHandler {
     }
     
     playSound() {
-        console.log("playSound")
         const audio = new Audio("./static/sound/space.wav");
         audio.play();
         this.hasUserInteracted = true;

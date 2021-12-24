@@ -64,5 +64,10 @@ The TARDIS was remixed from https://www.tinkercad.com/things/e4CxJPCXva5-tardis,
 
 The textures of the planets are from Codecademy.
 
+## Sound
+The source of the background music is: https://www.nasa.gov/wav/123163main_cas-skr1-112203.wav.
+
+This will play, unless you've set it not to in the URL, when you click on the scene or press a key.
+
 ## License
 This project uses the [MIT License](https://github.com/cBridges851/christmas-2021/blob/master/LICENSE)

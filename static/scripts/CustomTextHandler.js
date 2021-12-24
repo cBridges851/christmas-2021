@@ -1,11 +1,13 @@
 class CustomTextHandler {
     receiveParameters() {
         const url = window.location.href;
-        const regexPattern = /(?<=\?name=)[a-z1-9?!.,#()\@\:\;\/\-]+/i;
+        const regexPattern = /(?<=\?name=)[a-z0-9?!.,#()\%\@\:\;\/\-]+/i;
         const match = url.match(regexPattern);
 
         if (match !== null) {
-            return match[0];
+            let final = match[0].replaceAll("%20", " ");
+            console.log(match[0]);
+            return final;
         }
 
         return "Everyone!";

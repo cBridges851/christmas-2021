@@ -5,9 +5,8 @@ class CustomTextHandler {
         const match = url.match(regexPattern);
 
         if (match !== null) {
-            let final = match[0].replaceAll("%20", " ");
-            console.log(match[0]);
-            return final;
+            match[0] = match[0].replaceAll("%20", " ");
+            return match[0];
         }
 
         return "Everyone!";

@@ -26,6 +26,7 @@ This project is really easy to install if you wish to do so:
 - If you have cloned this repository, you can double click on index.html in the file explorer, or open index.html via a live server/
 
 - To change the name on the scene, add or change the query string parameter for `name`. E.g. https://cbridges851.github.io/christmas-2021/?name=GitHub
+- To toggle whether sound is played in the scene, add or change the query string parameter for `sound`. E.g. https://cbridges851.github.io/christmas-2021/?sound=false or https://cbridges851.github.io/christmas-2021/?sound=true. It's true by default, so sound will play. 
 
 - This is what the scene looks like:
 ![image](https://user-images.githubusercontent.com/54030147/147350310-3734364f-e006-483e-9a03-d6a7c6555de5.png)

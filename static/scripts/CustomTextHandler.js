@@ -1,7 +1,7 @@
 class CustomTextHandler {
     receiveParameters() {
         const url = window.location.href;
-        const regexPattern = /(?<=\?name=)[a-z0-9?!.,#()\%\@\:\;\/\-]+/i;
+        const regexPattern = /(?<=\??name=)[a-z0-9?!.,#()\%\@\:\;\/\-]+/i;
         const match = url.match(regexPattern);
 
         if (match !== null) {

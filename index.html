@@ -19,7 +19,6 @@
         <img id="saturn" src="./static/images/saturn.jpg" />
         <img id="uranus" src="./static/images/uranus.jpg" />
         <img id="neptune" src="./static/images/neptune.jpg" />
-        <audio id="background-music" src="./static/sound/space.wav"></audio>
         <a-asset-item id="christmas-tree" src="./static/models/ChristmasTree/ChristmasTree.glb"></a-asset-item>
         <a-asset-item id="astronaut" src="./static/models/ChristmasAstronaut/ChristmasAstronaut.glb"></a-asset-item>
         <a-asset-item id="asteroid" src="./static/models/Asteroid/Asteroid.glb"></a-asset-item>
@@ -226,6 +225,7 @@
     <script src="./static/scripts/CustomTextHandler.js"></script>
     <script src="./static/scripts/AsteroidHandler.js"></script>
     <script src="./static/scripts/SpeedHandler.js"></script>
+    <script src="./static/scripts/SoundHandler.js"></script>
     <script>
       let userInteraction = false;
       window.addEventListener("load", async () => {
@@ -233,6 +233,7 @@
         const customTextHandler = new CustomTextHandler();
         const asteroidHandler = new AsteroidHandler();
         const speedHandler = new SpeedHandler();
+        const soundHandler = new SoundHandler();
 
         fetch("./static/scripts/planets.json")
         .then(response => response.json())
@@ -262,6 +263,9 @@
           const speed = speedHandler.receiveParameters();
           speedHandler.updateSpeed(speed);
         });
+
+        soundHandler.receiveParameters();
+        soundHandler.setup();
       });
 
       console.log(
@@ -283,14 +287,6 @@
         "All the best,\n\n" +
         "Christa\n" +
         "🦄🦄🦄");
-
-        document.addEventListener("click", () => {
-          if (!userInteraction) {
-            const audio = new Audio("./static/sound/space.wav");
-            audio.play();
-            userInteraction = true;
-          }
-        });
     </script>
   </body>
 </html>

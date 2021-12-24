@@ -232,6 +232,7 @@
     <script src="./static/scripts/AsteroidHandler.js"></script>
     <script src="./static/scripts/SpeedHandler.js"></script>
     <script>
+      let userInteraction = false;
       window.addEventListener("load", async () => {
         const solarSystem = new SolarSystem();
         const customTextHandler = new CustomTextHandler();
@@ -287,6 +288,14 @@
         "All the best,\n\n" +
         "Christa\n" +
         "🦄🦄🦄");
+
+        document.addEventListener("click", () => {
+          if (!userInteraction) {
+            const audio = new Audio("./static/sound/space.wav");
+            audio.play();
+            userInteraction = true;
+          }
+        });
     </script>
   </body>
 </html>

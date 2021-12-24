@@ -25,11 +25,15 @@
         <a-asset-item id="asteroid" src="./static/models/Asteroid/Asteroid.glb"></a-asset-item>
         <a-asset-item id="red-flying-saucer" src="./static/models/FlyingSaucer/RedFlyingSaucer.glb"></a-asset-item>
         <a-asset-item id="green-flying-saucer" src="./static/models/FlyingSaucer/GreenFlyingSaucer.glb"></a-asset-item>
+        <a-asset-item id="gold-flying-saucer" src="./static/models/FlyingSaucer/GoldFlyingSaucer.glb"></a-asset-item>
+        <a-asset-item id="silver-flying-saucer" src="./static/models/FlyingSaucer/SilverFlyingSaucer.glb"></a-asset-item>
+        <a-asset-item id="purple-flying-saucer" src="./static/models/FlyingSaucer/PurpleFlyingSaucer.glb"></a-asset-item>
+        <a-asset-item id="tardis" src="./static/models/TARDIS/Tardis.glb"></a-asset-item>
         <a-asset-item id="ornament-string" src="./static/models/OrnamentString/OrnamentString.glb"></a-asset-item>
         <a-asset-item id="nakatomi-plaza-sign" src="./static/models/NakatomiPlazaSign/NakatomiPlazaSign.glb"></a-asset-item>
       </a-assets>
       <a-entity star-system></a-entity>
-      <a-entity camera look-controls wasd-controls="acceleration: 1000"></a-entity>
+      <a-entity id="camera" camera look-controls></a-entity>
       <a-light 
         type="ambient" 
         position="-81 88 -108" 
@@ -73,20 +77,105 @@
           dur: 10000;
         ">
       </a-entity>
+      <a-entity 
+        gltf-model="#red-flying-saucer" 
+        position="1000 50 -610"
+        animation="
+          property: rotation; 
+          to: 0 360 0; 
+          loop: true; 
+          dur: 6000"
+        animation__2="
+          property: position;
+          to: -1000 50 -610;
+          loop: true;
+          dir: alternate;
+          dur: 10000;
+        ">
+      </a-entity>
       <a-curve id="track__green-flying-saucer-1">
-        <a-curve-point position="1000 0 500"></a-curve-point>
-        <a-curve-point position="1000 0 -500"></a-curve-point>
-        <a-curve-point position="0 0 -1000"></a-curve-point>
-        <a-curve-point position="-1000 0 -500"></a-curve-point>
-        <a-curve-point position="-1000 0 500"></a-curve-point>
-        <a-curve-point position="0 0 1000"></a-curve-point>
-        <a-curve-point position="1000 0 500"></a-curve-point>
+        <a-curve-point position="1000 150 500"></a-curve-point>
+        <a-curve-point position="1000 150 -500"></a-curve-point>
+        <a-curve-point position="0 150 -1000"></a-curve-point>
+        <a-curve-point position="-1000 150 -500"></a-curve-point>
+        <a-curve-point position="-1000 150 500"></a-curve-point>
+        <a-curve-point position="0 150 1000"></a-curve-point>
+        <a-curve-point position="1000 150 500"></a-curve-point>
       </a-curve>
       <a-entity 
         gltf-model="#green-flying-saucer" 
         position="0 0 1000"
         alongpath="
           curve: #track__green-flying-saucer-1; 
+          loop: true; 
+          rotate: true; 
+          dur: 50000"
+        animation="
+          property: rotation; 
+          to: 0 360 0; 
+          loop: true; 
+          dur: 6000">
+      </a-entity>
+      <a-curve id="track__gold-flying-saucer-1">
+        <a-curve-point position="-500 600 -250"></a-curve-point>
+        <a-curve-point position="-500 600 250"></a-curve-point>
+        <a-curve-point position="0 600 500"></a-curve-point>
+        <a-curve-point position="500 600 250"></a-curve-point>
+        <a-curve-point position="500 600 -250"></a-curve-point>
+        <a-curve-point position="0 600 -500"></a-curve-point>
+        <a-curve-point position="-500 600 -250"></a-curve-point>
+      </a-curve>
+      <a-entity 
+        gltf-model="#gold-flying-saucer" 
+        position="0 600 -1000"
+        alongpath="
+          curve: #track__gold-flying-saucer-1; 
+          loop: true; 
+          rotate: true; 
+          dur: 50000"
+        animation="
+          property: rotation; 
+          to: 0 360 0; 
+          loop: true; 
+          dur: 6000">
+      </a-entity>
+      <a-curve id="track__silver-flying-saucer-1">
+        <a-curve-point position="-500 -600 -250"></a-curve-point>
+        <a-curve-point position="-500 -600 250"></a-curve-point>
+        <a-curve-point position="0 -600 500"></a-curve-point>
+        <a-curve-point position="500 -600 250"></a-curve-point>
+        <a-curve-point position="500 -600 -250"></a-curve-point>
+        <a-curve-point position="0 -600 -500"></a-curve-point>
+        <a-curve-point position="-500 -600 -250"></a-curve-point>
+      </a-curve>
+      <a-entity 
+        gltf-model="#silver-flying-saucer" 
+        position="1000 -600 500"
+        alongpath="
+          curve: #track__silver-flying-saucer-1; 
+          loop: true; 
+          rotate: true; 
+          dur: 50000"
+        animation="
+          property: rotation; 
+          to: 0 360 0; 
+          loop: true; 
+          dur: 6000">
+      </a-entity>
+      <a-curve id="track__purple-flying-saucer-1">
+        <a-curve-point position="-1000 0 -500"></a-curve-point>
+        <a-curve-point position="-1000 0 500"></a-curve-point>
+        <a-curve-point position="0 0 1000"></a-curve-point>
+        <a-curve-point position="1000 0 500"></a-curve-point>
+        <a-curve-point position="1000 0 -500"></a-curve-point>
+        <a-curve-point position="0 0 -1000"></a-curve-point>
+        <a-curve-point position="-1000 0 -500"></a-curve-point>
+      </a-curve>
+      <a-entity 
+        gltf-model="#purple-flying-saucer" 
+        position="0 0 -1000"
+        alongpath="
+          curve: #track__purple-flying-saucer-1; 
           loop: true; 
           rotate: true; 
           dur: 50000"
@@ -106,6 +195,12 @@
         position="-56.7 -1 -115"
         rotation="15 0 0"
         scale="0.1 0.1 0.1">
+      </a-entity>
+      <a-entity 
+        gltf-model="#tardis" 
+        position="0 0 10000"
+        rotation="0 0 0"
+        scale="1 1 1">
       </a-entity>
       <a-text 
         value="Merry"
@@ -135,11 +230,13 @@
     <script src="./static/scripts/SolarSystem.js"></script>
     <script src="./static/scripts/CustomTextHandler.js"></script>
     <script src="./static/scripts/AsteroidHandler.js"></script>
+    <script src="./static/scripts/SpeedHandler.js"></script>
     <script>
       window.addEventListener("load", async () => {
         const solarSystem = new SolarSystem();
         const customTextHandler = new CustomTextHandler();
         const asteroidHandler = new AsteroidHandler();
+        const speedHandler = new SpeedHandler();
 
         fetch("./static/scripts/planets.json")
         .then(response => response.json())
@@ -165,8 +262,31 @@
               asteroidHandler.travelToNewPosition(positions, asteroid);
             }, 15000);
           }
+
+          const speed = speedHandler.receiveParameters();
+          speedHandler.updateSpeed(speed);
         });
       });
+
+      console.log(
+        "🦄🦄🦄\n" + 
+        "Hello there!\n\n" +
+        "If you're reading this right now, I'm assuming you're a very nosy person, " +
+        "looking to see if there are any warnings or errors," +
+        "or even random rude words that I've accidentally left in from debugging.\n\n" + 
+        "I can confirm that all rude words have been removed, as I want to make sure this scene is family friendly uno 🤷‍♀️!\n\n" +
+        "However, you may see a few warnings about to do with resizing or something... but just like every developer, I'm ignoring them since this is a random personal project, and you can too (please) x\n\n" +
+        "Anyhoo, if you are one of these very nosy people, then I like you, your curiosity about this scene has brought you here, " + 
+        "so I think I owe you a small reward!\n\n" + 
+        "This small reward is a secret I'll let you in on...\n\n" +
+        "You may know that you can put in a name in URL to personalise your message, so your URL could look like 'https://cbridges851.github.io/christmas-2021/?name=Christa'" +
+        "which would then display 'Merry Christmas Christa'. " + 
+        "You can also use the URL to change the speed you go in the scene, so your URL could look like 'https://cbridges851.github.io/christmas-2021/?name=Christa&speed=5000' (by the way, the name parameter doesn't have to be there, so could just be 'https://cbridges851.github.io/christmas-2021/?speed=5000').\n\n" + 
+        "I hope that helps if you would like to get around this place a bit faster!\n\n" + 
+        "There we go! I hope you have a very Merry Christmas and a prosperous New Year! \n\n" +
+        "All the best,\n\n" +
+        "Christa\n" +
+        "🦄🦄🦄");
     </script>
   </body>
 </html>
